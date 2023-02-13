@@ -6,8 +6,8 @@ import { useFetching } from "../hooks/useFetching";
 
 const PostIdPage = () => {
   const params = useParams();
-  const [post, setPost] = useState([]);
-  const [comments, setComments] = useState({});
+  const [post, setPost] = useState({});
+  const [comments, setComments] = useState([]);
 
   const [fetchPostById, isLoading, error] = useFetching(async () => {
     const response = await PostService.getById(params.id);
@@ -34,7 +34,15 @@ const PostIdPage = () => {
           {post.id}. {post.title}
         </div>
       )}
-      <h1>Comments</h1>
+      <h1 style={{ marginTop: 50 }}>Comments</h1>
+      <div>
+        {comments.map((comm) => (
+          <div key={comm.id} style={{ marginTop: 15 }}>
+            <h5>{comm.email}</h5>
+            <div>{comm.body}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
