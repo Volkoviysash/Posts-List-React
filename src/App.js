@@ -1,20 +1,14 @@
-import React, { useEffect, useState } from "react";
-import "./styles/App.css";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import About from "./pages/About";
-import Posts from "./pages/Posts";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./components/AppRouter";
 import Navbar from "./components/UI/navbar/Navbar";
+import "./styles/App.css";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
-        <Route path="/posts" element={<Posts />} />
-        <Route path="/about" element={<About />} />
-        {/* For some URL that does'n exist */}
-        <Route path="/*" element={<Navigate to="/posts" replace />} />
-      </Routes>
+      <AppRouter />
     </BrowserRouter>
   );
 }
