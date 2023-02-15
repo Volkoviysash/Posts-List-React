@@ -7,6 +7,7 @@ import MyButton from "../components/UI/button/MyButton";
 import Loader from "../components/UI/loader/Loader";
 import MyModal from "../components/UI/MyModal/MyModal";
 import Pagination from "../components/UI/pagination/Pagination";
+import MySelect from "../components/UI/select/MySelect";
 import { useFetching } from "../hooks/useFetching";
 import { useObserver } from "../hooks/useObserver";
 import { usePosts } from "../hooks/usePosts";
@@ -36,7 +37,7 @@ function Posts() {
 
   useEffect(() => {
     fetchPosts(limit, page);
-  }, [page]);
+  }, [page, limit]);
 
   //Create new post
   const createPost = (newPost) => {
@@ -64,6 +65,17 @@ function Posts() {
       </MyModal>
       <hr style={{ margin: "15px" }}></hr>
       <PostFilter filter={filter} setFilter={setFilter} />
+      <MySelect
+        value={limit}
+        onChange={setLimit}
+        defaultValue="Number of posts per the page"
+        options={[
+          { value: 5, name: "5" },
+          { value: 10, name: "10" },
+          { value: 20, name: "20" },
+          { value: -1, name: "Show all" },
+        ]}
+      />
       {postError && <h1>{postError} - Error has occurred</h1>}
       {isPostsLoading && (
         <div
