@@ -68,7 +68,7 @@ function Posts() {
       <MySelect
         value={limit}
         onChange={setLimit}
-        defaultValue="Number of posts per the page"
+        defaultValue="Posts per the page"
         options={[
           { value: 5, name: "5" },
           { value: 10, name: "10" },
@@ -87,7 +87,7 @@ function Posts() {
         posts={sortedAndSearchedPosts}
         title="List of posts about JS"
       />
-      <div style={{ height: 20, background: "red" }} ref={lastElement} />
+      <div style={{ height: 20 }} ref={lastElement} />
       <Pagination page={page} changePage={changePage} totalPages={totalPages} />
     </div>
   );
