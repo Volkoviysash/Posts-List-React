@@ -85,7 +85,7 @@ function Posts() {
       <PostList
         remove={removePost}
         posts={sortedAndSearchedPosts}
-        title="List of posts about JS"
+        title="List of randomly generated posts"
       />
       <div style={{ height: 20 }} ref={lastElement} />
       <Pagination page={page} changePage={changePage} totalPages={totalPages} />
