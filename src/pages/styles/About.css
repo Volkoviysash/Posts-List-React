@@ -1,0 +1,49 @@
+.myBody {
+  color: #333;
+  background-color: #fff;
+  width: 800px;
+}
+
+.title {
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: var(--main-color);
+  font-weight: bold;
+  margin: 30px 10px 10px 0px;
+}
+
+h2:hover {
+  color: rgb(255, 146, 146);
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+ul {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  color: #333;
+  font-size: 16px;
+  padding: 20px;
+  text-align: center;
+  /* width: 100vw; */
+}
