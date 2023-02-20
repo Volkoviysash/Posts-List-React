@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PostService from "../API/PostService";
+import MyComments from "../components/UI/comments/MyComments";
 import Loader from "../components/UI/loader/Loader";
 import { useFetching } from "../hooks/useFetching";
 import "./styles/PostIdPage.css";
@@ -38,14 +39,7 @@ const PostIdPage = () => {
         </div>
       )}
       <h1 style={{ marginTop: 50 }}>Comments</h1>
-      <div>
-        {comments.map((comm) => (
-          <div key={comm.id} style={{ marginTop: 15 }}>
-            <h5>{comm.email}</h5>
-            <div>{comm.body}</div>
-          </div>
-        ))}
-      </div>
+      <MyComments comments={comments} />
     </div>
   );
 };

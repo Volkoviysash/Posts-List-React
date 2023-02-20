@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div>
       <div className="myBody">
-        <h1 className="title">This is a PostListApplication</h1>
+        <h1 className="title">About post list application</h1>
         <section>
           <a href="#aboutApp">
             <h2 id="aboutApp">About app</h2>

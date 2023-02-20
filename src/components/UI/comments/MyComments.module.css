@@ -1,0 +1,15 @@
+.commentBlock {
+  background-color: rgba(128, 164, 255, 0.487);
+  color: rgb(49, 49, 49);
+  margin-top: 15px;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.commEmail {
+  padding-bottom: 3px;
+}
+
+.comment::first-letter {
+  text-transform: capitalize;
+}

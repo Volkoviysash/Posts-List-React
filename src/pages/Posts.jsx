@@ -69,7 +69,7 @@ function Posts() {
       <MySelect
         value={limit}
         onChange={setLimit}
-        defaultValue="Posts per the page"
+        defaultValue="Posts per page"
         options={[
           { value: 5, name: "5" },
           { value: 10, name: "10" },

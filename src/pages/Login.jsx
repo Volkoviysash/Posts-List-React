@@ -15,7 +15,7 @@ const Login = () => {
   };
 
   return (
-    <div className="body">
+    <div className="loginBody">
       <h1>Login Page</h1>
       <form onSubmit={login}>
         <MyInput type="text" placeholder="Username" />
