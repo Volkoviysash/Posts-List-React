@@ -4,6 +4,7 @@ import PostFilter from "../components/PostFilter";
 import PostForm from "../components/PostForm";
 import PostList from "../components/PostList";
 import MyButton from "../components/UI/button/MyButton";
+import MyFooter from "../components/UI/footer/MyFooter";
 import Loader from "../components/UI/loader/Loader";
 import MyModal from "../components/UI/MyModal/MyModal";
 import Pagination from "../components/UI/pagination/Pagination";
@@ -89,6 +90,7 @@ function Posts() {
       />
       <div style={{ height: 20 }} ref={lastElement} />
       <Pagination page={page} changePage={changePage} totalPages={totalPages} />
+      <MyFooter />
     </div>
   );
 }

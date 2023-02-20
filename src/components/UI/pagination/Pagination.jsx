@@ -1,11 +1,12 @@
 import React from "react";
 import { getPagesArray } from "../../../utils/pages";
+import cl from "./Pagination.module.css";
 
 export default ({ totalPages, page, changePage }) => {
   let pagesArray = getPagesArray(totalPages);
 
   return (
-    <div className="page__wrapper">
+    <div className={cl.page__wrapper}>
       {pagesArray.map((p) => (
         <span
           key={p}

@@ -1,11 +1,6 @@
 import React from "react";
+import MyFooter from "../components/UI/footer/MyFooter";
 import "./styles/About.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTwitter,
-  faInstagram,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
 
 const About = () => {
   return (
@@ -101,13 +96,8 @@ const About = () => {
           </p>
         </section>
         <hr></hr>
+        <MyFooter />
       </div>
-      <footer>
-        by{" "}
-        <a href="https://github.com/Volkoviysash" target="_blank">
-          <FontAwesomeIcon icon={faGithub} /> volkovich alexandr
-        </a>
-      </footer>
     </div>
   );
 };

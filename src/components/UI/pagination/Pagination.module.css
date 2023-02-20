@@ -1,0 +1,9 @@
+.page__wrapper {
+  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+}
+
+span {
+  margin: 0 2px;
+}

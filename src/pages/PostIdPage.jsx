@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import PostService from "../API/PostService";
 import Loader from "../components/UI/loader/Loader";
 import { useFetching } from "../hooks/useFetching";
+import "./styles/PostIdPage.css";
 
 const PostIdPage = () => {
   const params = useParams();
@@ -25,13 +26,15 @@ const PostIdPage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>You have opened the page of the post with id = {params.id} </h1>
+    <div className="body">
+      <h1>Post's page</h1>
       {isLoading ? (
         <Loader />
       ) : (
-        <div>
-          {post.id}. {post.title}
+        <div className="postContainer">
+          <div className="postTitle">{post.title}.</div>
+          <hr />
+          <div className="postDescription">{post.body}.</div>
         </div>
       )}
       <h1 style={{ marginTop: 50 }}>Comments</h1>

@@ -1,0 +1,34 @@
+.body {
+  color: #333;
+  background-color: #fff;
+  width: 800px;
+  margin-top: 50px;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.postContainer {
+  padding: 20px;
+  border: 2px solid var(--main-color);
+  border-radius: 2px;
+}
+
+.postTitle {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+.postDescription {
+  padding: 20px;
+  text-indent: 20px;
+  text-align: justify;
+}
+
+.postTitle::first-letter,
+.postDescription::first-letter {
+  text-transform: capitalize;
+}

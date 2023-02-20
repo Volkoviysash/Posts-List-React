@@ -1,16 +1,18 @@
 import React from "react";
 import MyButton from "./UI/button/MyButton";
 import { useNavigate } from "react-router-dom";
+import "../styles/App.css";
 
 const PostItem = (props) => {
   const navigate = useNavigate();
   return (
     <div className="post">
       <div className="post__content">
-        <strong>
-          {props.post.id}. {props.post.title}
+        <strong className="post_title_id">
+          <div className="post__id">{props.post.id}. </div>
+          <div className="post__title">{props.post.title}</div>
         </strong>
-        <div>{props.post.body}</div>
+        <div className="post__body">{props.post.body}</div>
       </div>
       <div className="post__btns">
         <MyButton onClick={() => navigate(`/posts/${props.post.id}`)}>
